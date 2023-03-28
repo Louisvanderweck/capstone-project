@@ -13,7 +13,7 @@ export default function Home() {
   }
 
   const filteredProducts = products.filter(
-    (product) => product.type === filter
+    (product) => product.type === filter || filter === ""
   );
   return (
     <main>
@@ -29,6 +29,7 @@ export default function Home() {
         <Button titel="Ringe" onClick={() => updateFilter("ring")} />
         <Button titel="Ketten" onClick={() => updateFilter("nack")} />
         <Button titel="Ohrringe" onClick={() => updateFilter("ear")} />
+        <Button titel="X" onClick={() => updateFilter("")} />
         {/* <div>Ringe</div>
         <div>Ketten</div>
         <div>Ohrringe</div> */}
