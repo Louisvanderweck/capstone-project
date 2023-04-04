@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
       }}
     >
       <Image alt={product.name} src={product.Image} width="350" height="300" />
-      <h1>{product.name}</h1>
+      <h2>{product.name}</h2>
       <div>{product.description}</div>
       <div>{product.price}</div>
       <br />

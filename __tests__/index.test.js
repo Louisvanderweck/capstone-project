@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 test("test", () => {
   render(<Home />);
   const element = screen.getByRole("heading", {
-    name: /I + J van der Weck/,
+    name: /van der Weck/,
   });
   expect(element).toBeInTheDocument();
 });
