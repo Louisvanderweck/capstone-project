@@ -1,4 +1,6 @@
-const Button = ({ productState, productType, titel, onClick, type }) => {
+import { useState, useEffect } from "react";
+
+const ButtonMaterial = ({ titel, onClick, materialType }) => {
   return (
     <div
       onClick={onClick}
@@ -7,11 +9,10 @@ const Button = ({ productState, productType, titel, onClick, type }) => {
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
-        backgroundColor:
-          productState === productType ? "rgb(203, 180, 188)" : "",
+        backgroundColor: materialType === titel ? "rgb(203, 180, 188)" : "",
         border: "2px solid rgb(203, 180, 188)",
         borderRadius: "20px",
-        flex: 1,
+        width: "150px",
         height: "50px",
         color: "gray",
         textTransform: "uppercase",
@@ -22,4 +23,4 @@ const Button = ({ productState, productType, titel, onClick, type }) => {
   );
 };
 
-export default Button;
+export default ButtonMaterial;

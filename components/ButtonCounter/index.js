@@ -1,4 +1,4 @@
-const Button = ({ productState, productType, titel, onClick, type }) => {
+const ButtonCounter = ({ titel, onClick, type }) => {
   return (
     <div
       onClick={onClick}
@@ -7,11 +7,9 @@ const Button = ({ productState, productType, titel, onClick, type }) => {
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
-        backgroundColor:
-          productState === productType ? "rgb(203, 180, 188)" : "",
-        border: "2px solid rgb(203, 180, 188)",
-        borderRadius: "20px",
-        flex: 1,
+        cursor: "pointer",
+
+        width: "50px",
         height: "50px",
         color: "gray",
         textTransform: "uppercase",
@@ -22,4 +20,4 @@ const Button = ({ productState, productType, titel, onClick, type }) => {
   );
 };
 
-export default Button;
+export default ButtonCounter;

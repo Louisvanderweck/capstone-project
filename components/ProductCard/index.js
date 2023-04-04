@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
         flex: 1,
         border: "1px solid black",
         width: "400px",
-        height: "500px",
+        height: "550px",
       }}
     >
       <Image alt={product.name} src={product.Image} width="350" height="300" />

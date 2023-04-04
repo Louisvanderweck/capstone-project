@@ -1,23 +1,23 @@
 import Heading from "../components/Heading";
 import ProductCard from "../components/ProductCard";
-import { products } from "./products";
+import { products } from "../data/products";
 import Button from "../components/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Home() {
-  const [filter, setFilter] = useState("");
+  const [productType, setProductType] = useState("");
 
-  function updateFilter(newFilter) {
-    setFilter(newFilter);
+  function updateFilter(type) {
+    setProductType(type);
   }
 
   const filteredProducts = products.filter(
-    (product) => product.type === filter || filter === ""
+    (product) => product.type === productType || productType === ""
   );
   return (
     <main>
-      <Heading>Capstone von Louis</Heading>
+      <Heading>I + J van der Weck</Heading>
       <div
         style={{
           display: "flex",
@@ -26,13 +26,30 @@ export default function Home() {
           gap: "40px",
         }}
       >
-        <Button titel="Ringe" onClick={() => updateFilter("ring")} />
-        <Button titel="Ketten" onClick={() => updateFilter("nack")} />
-        <Button titel="Ohrringe" onClick={() => updateFilter("ear")} />
-        <Button titel="X" onClick={() => updateFilter("")} />
-        {/* <div>Ringe</div>
-        <div>Ketten</div>
-        <div>Ohrringe</div> */}
+        <Button
+          productState={productType}
+          productType={""}
+          titel="Alle"
+          onClick={() => updateFilter("")}
+        />
+        <Button
+          productState={productType}
+          productType={"ring"}
+          titel="Ringe"
+          onClick={() => updateFilter("ring")}
+        />
+        <Button
+          productState={productType}
+          productType={"nack"}
+          titel="Ketten"
+          onClick={() => updateFilter("nack")}
+        />
+        <Button
+          productState={productType}
+          productType={"earring"}
+          titel="Ohrringe"
+          onClick={() => updateFilter("earring")}
+        />
       </div>
       <div
         style={{
@@ -41,12 +58,11 @@ export default function Home() {
           width: "100%",
           flexWrap: "wrap",
           gap: "20px",
-          // background: "yellow",
         }}
       >
         {filteredProducts.map((product) => {
           return (
-            <Link href={`/products2/${product.id}`} key={product.id}>
+            <Link href={`/product/${product.id}`} key={product.id}>
               <ProductCard key={product.id} product={product} />
             </Link>
           );
