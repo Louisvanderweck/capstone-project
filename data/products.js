@@ -3,7 +3,7 @@ import bulletRing from "../public/bulletRing.webp";
 import fatBullet from "../public/fatBullet.webp";
 import tankRing from "../public/tankRing.webp";
 import tankNack from "../public/tankNack.webp";
-import earringtank from "../public/earringtank.webp";
+import earringtank from "../public/earringTank.webp";
 import ketteV from "../public/ketteV.webp";
 import Ketteconnected from "../public/halsketteConnect.webp";
 
