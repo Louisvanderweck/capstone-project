@@ -2,10 +2,10 @@ import { useRouter } from "next/router";
 import ProductCard from "../../components/ProductCard";
 import { products } from "../../data/products";
 import Button from "../../components/Button";
+import LinkButton from "../../components/LinkButton";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import ButtonCounter from "../../components/ButtonCounter";
-import ButtonMaterial from "../../components/ButtonMaterial";
 // import SubmitButton from "../../components/SubmitButton";
 import React from "react";
 
@@ -68,12 +68,13 @@ export default function ProductDetails() {
         <div style={styles.materialButtons}>
           {foundProduct.materials.map((material, index) => {
             return (
-              <ButtonMaterial
+              <Button
+                variant={materialType === material ? "filled" : "outlined"}
                 key={index}
-                titel={material}
                 onClick={() => setMaterialType(material)}
-                materialType={materialType}
-              />
+              >
+                {material}
+              </Button>
             );
           })}
         </div>
@@ -83,9 +84,15 @@ export default function ProductDetails() {
           <ButtonCounter titel={"+"} onClick={addCount} />
         </div>
         <br />
-        <div style={{ width: 400 }}>
-          <Button titel={"In den Warenkorb"} onClick={addToCart} />
-          <Button titel={"Zum Warenkorb"} onClick={() => {}} />
+        <div style={styles.cartButtonContainer}>
+          <Button
+            style={{ width: "100%" }}
+            variant="filled"
+            onClick={addToCart}
+          >
+            In den Warenkorb
+          </Button>
+          <LinkButton href="/warenkorb">Zum Warenkorb</LinkButton>
         </div>
       </div>
     </div>
@@ -93,6 +100,12 @@ export default function ProductDetails() {
 }
 
 const styles = {
+  cartButtonContainer: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    gap: 8,
+  },
   container: {
     display: "flex",
     justifyContent: "center",
@@ -100,11 +113,13 @@ const styles = {
     flexDirection: "column",
     flex: 1,
     width: "100%",
+    gap: 8,
   },
   materialButtons: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    gap: 8,
   },
   counterbuttons: {
     display: "flex",

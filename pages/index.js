@@ -16,7 +16,7 @@ export default function Home() {
     (product) => product.type === productType || productType === ""
   );
   return (
-    <main>
+    <>
       <Heading>I + J van der Weck</Heading>
       <div
         style={{
@@ -27,29 +27,29 @@ export default function Home() {
         }}
       >
         <Button
-          productState={productType}
-          productType={""}
-          titel="Alle"
+          variant={productType === "" ? "filled" : "outlined"}
           onClick={() => updateFilter("")}
-        />
+        >
+          Alle
+        </Button>
         <Button
-          productState={productType}
-          productType={"ring"}
-          titel="Ringe"
+          variant={productType === "ring" ? "filled" : "outlined"}
           onClick={() => updateFilter("ring")}
-        />
+        >
+          Ringe
+        </Button>
         <Button
-          productState={productType}
-          productType={"nack"}
-          titel="Ketten"
+          variant={productType === "nack" ? "filled" : "outlined"}
           onClick={() => updateFilter("nack")}
-        />
+        >
+          Ketten
+        </Button>
         <Button
-          productState={productType}
-          productType={"earring"}
-          titel="Ohrringe"
+          variant={productType === "earring" ? "filled" : "outlined"}
           onClick={() => updateFilter("earring")}
-        />
+        >
+          Ohrringe
+        </Button>
       </div>
       <div
         style={{
@@ -68,6 +68,6 @@ export default function Home() {
           );
         })}
       </div>
-    </main>
+    </>
   );
 }
