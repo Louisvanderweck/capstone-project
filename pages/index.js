@@ -1,9 +1,13 @@
 import Heading from "../components/Heading";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/products";
-import Button from "../components/Button";
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useState } from "react";
+import {
+  StyledLink,
+  StyledFilterContainer,
+  StyledMainContainer,
+  Button,
+} from "../styles";
 
 export default function Home() {
   const [productType, setProductType] = useState("");
@@ -18,14 +22,7 @@ export default function Home() {
   return (
     <>
       <Heading>I + J van der Weck</Heading>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          width: "100%",
-          gap: "40px",
-        }}
-      >
+      <StyledFilterContainer>
         <Button
           variant={productType === "" ? "filled" : "outlined"}
           onClick={() => updateFilter("")}
@@ -50,24 +47,20 @@ export default function Home() {
         >
           Ohrringe
         </Button>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          width: "100%",
-          flexWrap: "wrap",
-          gap: "20px",
-        }}
-      >
+      </StyledFilterContainer>
+      <StyledMainContainer>
         {filteredProducts.map((product) => {
           return (
-            <Link href={`/product/${product.id}`} key={product.id}>
+            <StyledLink
+              href={`/product/${product.id}`}
+              key={product.id}
+              style={{ width: "100%" }}
+            >
               <ProductCard key={product.id} product={product} />
-            </Link>
+            </StyledLink>
           );
         })}
-      </div>
+      </StyledMainContainer>
     </>
   );
 }

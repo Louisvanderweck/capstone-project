@@ -1,22 +1,22 @@
 import Image from "next/image";
+import { ProductCardContainer, ProductName, ProductImage } from "../../styles";
 
 const ProductCard = ({ product }) => {
   return (
-    <div
-      key={product.id}
-      style={{
-        flex: 1,
-        border: "1px solid black",
-        width: "400px",
-        height: "550px",
-      }}
-    >
-      <Image alt={product.name} src={product.Image} width="350" height="300" />
-      <h2>{product.name}</h2>
+    <ProductCardContainer key={product.id}>
+      <ProductImage>
+        <Image
+          alt={product.name}
+          src={product.Image}
+          width={200}
+          height={200}
+        />
+      </ProductImage>
+      <ProductName>{product.name}</ProductName>
       <div>{product.description}</div>
       <div>{product.price}</div>
       <br />
-    </div>
+    </ProductCardContainer>
   );
 };
 
