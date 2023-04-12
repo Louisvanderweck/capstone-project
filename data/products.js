@@ -1,4 +1,4 @@
-import kette from "../public/kette.webp";
+import TwoSame from "../public/TwoSame.webp";
 import bulletRing from "../public/bulletRing.webp";
 import fatBullet from "../public/fatBullet.webp";
 import tankRing from "../public/tankRing.webp";
@@ -6,16 +6,22 @@ import tankNack from "../public/tankNack.webp";
 import earringtank from "../public/earringTank.webp";
 import ketteV from "../public/ketteV.webp";
 import Ketteconnected from "../public/halsketteConnect.webp";
+import OhrringSmallHoops from "../public/OhrringSmallHoops.webp";
+import BigCuff from "../public/BigCuff.webp";
+import RingTape from "../public/RingTape.webp";
+import ketteDuoTank from "../public/HalsketteDuoTank.webp";
+import ketteTank2 from "../public/HalsketteTank2.webp";
 
 export const products = [
   {
     id: 1,
-    name: "GoldRing",
-    materials: ["gold", "silver", "platinum"],
+    name: "Two Same",
+    materials: ["gold", "silver"],
     type: "ring",
-    price: "150 €",
-    description: "A beautiful gold ring with a diamond accent.",
-    Image: kette,
+    price: "90 €",
+    description:
+      "Getragen sieht man bei dem Ring Two same, nur die Kugeln. Wie der Name schon verrät sind die Kugeln gleichgroß mit einem Durchmesser von 8 mm. Der Ring hat den Vorteil, dass man ihn minimal an den Finger anpassen kann, durch leichtes zusammendrücken oder aufbiegen. Jedoch darf das nicht oft gemacht werden, da es dann sein kann, dass der Ring bricht.",
+    Image: TwoSame,
   },
   {
     id: 2,
@@ -29,24 +35,6 @@ export const products = [
   },
   {
     id: 3,
-    name: "Silver Nacklace",
-    materials: ["gold", "silver"],
-    type: "nack",
-    price: 130,
-    description: "A beautiful silver Nack.",
-    Image: "",
-  },
-  {
-    id: 4,
-    name: "Platinum Ring",
-    materials: ["platinum"],
-    type: "ring",
-    price: 130,
-    description: "A beautiful Plartinum Ring with a diamond accent.",
-    Image: "",
-  },
-  {
-    id: 5,
     name: "Kette V",
     materials: ["gold", "silver"],
     type: "nack",
@@ -56,7 +44,7 @@ export const products = [
     Image: ketteV,
   },
   {
-    id: 6,
+    id: 4,
     name: "Halskette Tank 4",
     materials: ["platinum", "silver"],
     type: "nack",
@@ -66,7 +54,7 @@ export const products = [
     Image: tankNack,
   },
   {
-    id: 7,
+    id: 5,
     name: "Ohrringe Tank 4",
     materials: ["gold", "silver"],
     type: "earring",
@@ -76,7 +64,7 @@ export const products = [
     Image: earringtank,
   },
   {
-    id: 8,
+    id: 6,
     name: "Tank Ring",
     materials: ["gold", "silver"],
     type: "ring",
@@ -86,7 +74,7 @@ export const products = [
     Image: tankRing,
   },
   {
-    id: 9,
+    id: 7,
     name: "Bullet Ring",
     materials: ["gold", "silver"],
     type: "ring",
@@ -96,7 +84,7 @@ export const products = [
     Image: bulletRing,
   },
   {
-    id: 10,
+    id: 8,
     name: "fat Bullet",
     materials: ["gold", "silver"],
     type: "earring",
@@ -104,5 +92,52 @@ export const products = [
     description:
       "Der Ohrring fat Bullet in Silber oder in Gold mit 5 Kugeln. Dieser Ohrring ist schlicht und passt zu jedem Anlass.",
     Image: fatBullet,
+  },
+  {
+    id: 9,
+    name: "Ohrring small Hoops",
+    materials: ["gold", "silver"],
+    type: "earring",
+    price: 35,
+    description:
+      "Die Ohrringe Hoops sind die besten Ohren-Begleiter für den Alltag. Im Bereich Kollektionen Anhänger oder Ohrringe könnt ihr die Hoops noch individualisieren.",
+    Image: OhrringSmallHoops,
+  },
+  {
+    id: 10,
+    name: "big Cuff",
+    materials: ["gold", "silver"],
+    type: "earring",
+    price: 60,
+    description: "Der Earcuff setzt sich hier in voller Pracht in Szene",
+    Image: BigCuff,
+  },
+  {
+    id: 11,
+    name: "Ring Tape",
+    materials: ["gold", "silver"],
+    type: "ring",
+    price: 60,
+    description:
+      "Der Ring Tape umschließt den Finger nicht, sondern ist offen. Du kannst den Ring aber auch drehen. Es gibt den Ring in 3 verschiedenen Breiten. Unser Schmuck wird auf Nachfrage in Handarbeit von uns gefertigt. Jedes Teil unterscheidet sich voneinander, jedes Schmuckstück ist ein Einzelstück,ein Unikat",
+    Image: RingTape,
+  },
+  {
+    id: 12,
+    name: "Halskette Tank 2",
+    materials: ["gold", "silver"],
+    type: "nack",
+    price: 60,
+    description: "Die feine Kette ist für jeden Geschmack und jede Vorliebe.",
+    Image: ketteTank2,
+  },
+  {
+    id: 13,
+    name: "Halskette Duo Tank 4",
+    materials: ["gold", "silver"],
+    type: "nack",
+    price: 120,
+    description: "Ein zusammenspeil aus der Tank 2 und der Tank 4 Kette",
+    Image: ketteDuoTank,
   },
 ];
