@@ -22,6 +22,7 @@ export default function Home() {
   return (
     <>
       <Heading>I + J van der Weck</Heading>
+
       <StyledFilterContainer>
         <Button
           variant={productType === "" ? "filled" : "outlined"}

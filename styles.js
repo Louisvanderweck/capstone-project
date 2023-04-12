@@ -85,3 +85,20 @@ export const ProductImage = styled.div`
   width: 200px;
   height: 200px;
 `;
+
+export const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  height: 60px;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgb(203, 180, 188);
+`;
+
+export const NavLink = styled.a`
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px;
+`;
